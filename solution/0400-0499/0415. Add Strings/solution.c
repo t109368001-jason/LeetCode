@@ -19,8 +19,12 @@ char* addStrings(char* num1, char* num2) {
   bool  c = 0;
   while (end1 >= num1 || end2 >= num2 || c) {
     sum = 0;
-    if (end1 >= num1) { sum += *end1 - '0'; }
-    if (end2 >= num2) { sum += *end2 - '0'; }
+    if (end1 >= num1) {
+      sum += *end1 - '0';
+    }
+    if (end2 >= num2) {
+      sum += *end2 - '0';
+    }
     if (c) {
       sum++;
       c = false;

@@ -21,9 +21,15 @@ int nthUglyNumber(int n) {
         buf[i] = n3;
       }
     }
-    if (buf[i] == n1) { x++; }
-    if (buf[i] == n2) { y++; }
-    if (buf[i] == n3) { z++; }
+    if (buf[i] == n1) {
+      x++;
+    }
+    if (buf[i] == n2) {
+      y++;
+    }
+    if (buf[i] == n3) {
+      z++;
+    }
   }
   return buf[n - 1];
 }

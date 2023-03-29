@@ -9,7 +9,9 @@ int maxProfit(int* prices, int pricesSize) {
       continue;
     }
     int num = prices[i] - min;
-    if (num > result) { result = num; }
+    if (num > result) {
+      result = num;
+    }
   }
   return result;
 }

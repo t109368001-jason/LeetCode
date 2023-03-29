@@ -39,6 +39,8 @@ int* twoOutOfThree(int* nums1, int nums1Size, int* nums2, int nums2Size, int* nu
   }
   int* result = calloc(count, sizeof(int));
   *returnSize = count;
-  for (int i = 0; i < count; i++) { result[i] = buf[i]; }
+  for (int i = 0; i < count; i++) {
+    result[i] = buf[i];
+  }
   return result;
 }

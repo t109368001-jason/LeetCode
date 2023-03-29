@@ -9,7 +9,9 @@
 struct ListNode* removeNthFromEnd(struct ListNode* head, int n) {
   struct ListNode* left  = head;
   struct ListNode* right = head;
-  for (int i = 0; i < n; i++) { right = right->next; }
+  for (int i = 0; i < n; i++) {
+    right = right->next;
+  }
   if (!right) {
     struct ListNode* tmp = head->next;
     free(head);

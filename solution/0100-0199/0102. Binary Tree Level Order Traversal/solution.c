@@ -34,7 +34,9 @@ void addResult(int level, int val, int*** result, int* returnSize, int** returnC
   }
   int  newRowSizes = (*returnColumnSizes)[level] + 1;
   int* newRow      = calloc(newRowSizes, sizeof(int));
-  for (int i = 0; i < (*returnColumnSizes)[level]; i++) { newRow[i] = (*result)[level][i]; }
+  for (int i = 0; i < (*returnColumnSizes)[level]; i++) {
+    newRow[i] = (*result)[level][i];
+  }
   newRow[(*returnColumnSizes)[level]] = val;
   free((*result)[level]);
   (*result)[level]            = newRow;
@@ -48,14 +50,20 @@ void DFS(int              level,
          int**            returnColumnSizes,
          void             callback(int level, int val, int** result, int* returnSize, int** returnColumnSizes)) {
   callback(level, root->val, result, returnSize, returnColumnSizes);
-  if (root->left) { DFS(level + 1, root->left, result, returnSize, returnColumnSizes, addResult); }
-  if (root->right) { DFS(level + 1, root->right, result, returnSize, returnColumnSizes, addResult); }
+  if (root->left) {
+    DFS(level + 1, root->left, result, returnSize, returnColumnSizes, addResult);
+  }
+  if (root->right) {
+    DFS(level + 1, root->right, result, returnSize, returnColumnSizes, addResult);
+  }
 }
 
 int** levelOrder(struct TreeNode* root, int* returnSize, int** returnColumnSizes) {
   *returnSize        = 0;
   *returnColumnSizes = NULL;
-  if (!root) { return NULL; }
+  if (!root) {
+    return NULL;
+  }
   int** result = NULL;
   DFS(0, root, &result, returnSize, returnColumnSizes, addResult);
   return result;

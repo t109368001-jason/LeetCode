@@ -6,7 +6,9 @@
  * };
  */
 struct ListNode* oddEvenList(struct ListNode* head) {
-  if (!head) { return head; }
+  if (!head) {
+    return head;
+  }
   struct ListNode* head1 = NULL;
   struct ListNode* tail1 = NULL;
   struct ListNode* head2 = NULL;
@@ -37,6 +39,8 @@ struct ListNode* oddEvenList(struct ListNode* head) {
     current = current->next;
   }
   tail1->next = head2;
-  if (tail2) { tail2->next = NULL; }
+  if (tail2) {
+    tail2->next = NULL;
+  }
   return head1;
 }

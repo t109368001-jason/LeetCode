@@ -41,8 +41,12 @@ double findMedianSortedArrays(int* nums1, int nums1Size, int* nums2, int nums2Si
       n2 = 0;
     }
     remain = 0;
-    if (m1 != 0) { remain += n1 - m1 + 1; }
-    if (m2 != 0) { remain += n2 - m2 + 1; }
+    if (m1 != 0) {
+      remain += n1 - m1 + 1;
+    }
+    if (m2 != 0) {
+      remain += n2 - m2 + 1;
+    }
   }
   if (m1 == 0) {
     return ((double)(*m2 + *n2)) / 2;

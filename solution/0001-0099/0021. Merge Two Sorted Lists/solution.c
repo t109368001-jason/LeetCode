@@ -6,7 +6,9 @@
  * };
  */
 struct ListNode* mergeTwoLists(struct ListNode* list1, struct ListNode* list2) {
-  if (!list1 && !list2) { return NULL; }
+  if (!list1 && !list2) {
+    return NULL;
+  }
   struct ListNode* head    = calloc(1, sizeof(struct ListNode));
   struct ListNode* current = head;
   if (!list2) {

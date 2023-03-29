@@ -16,7 +16,9 @@ void connectAllLRtoRL(struct Node* left, struct Node* right) {
 }
 
 struct Node* connect(struct Node* root) {
-  if (!root) { return root; }
+  if (!root) {
+    return root;
+  }
   if (root->left && root->right) {
     root->left->next = root->right;
     connect(root->left);

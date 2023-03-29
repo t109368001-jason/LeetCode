@@ -15,7 +15,9 @@ int findKthLargest(int* nums, int numsSize, int k) {
           flag    = false;
         }
       }
-      if (flag) { break; }
+      if (flag) {
+        break;
+      }
     }
   }
   nums += k;
@@ -23,7 +25,9 @@ int findKthLargest(int* nums, int numsSize, int k) {
     if (nums[0] > l[0]) {
       l[0] = nums[0];
       for (int i = 1; i < k; i++) {
-        if (l[i] >= l[i - 1]) { break; }
+        if (l[i] >= l[i - 1]) {
+          break;
+        }
         int tmp  = l[i - 1];
         l[i - 1] = l[i];
         l[i]     = tmp;

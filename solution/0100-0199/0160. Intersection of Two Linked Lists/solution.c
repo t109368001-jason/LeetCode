@@ -19,10 +19,16 @@ struct ListNode* getIntersectionNode(struct ListNode* headA, struct ListNode* he
     lengthB++;
     tmp = tmp->next;
   }
-  for (int i = lengthA; i < lengthB; i++) { headB = headB->next; }
-  for (int i = lengthB; i < lengthA; i++) { headA = headA->next; }
+  for (int i = lengthA; i < lengthB; i++) {
+    headB = headB->next;
+  }
+  for (int i = lengthB; i < lengthA; i++) {
+    headA = headA->next;
+  }
   while (headA != NULL && headB != NULL) {
-    if (headA == headB) { return headA; }
+    if (headA == headB) {
+      return headA;
+    }
     headA = headA->next;
     headB = headB->next;
   }

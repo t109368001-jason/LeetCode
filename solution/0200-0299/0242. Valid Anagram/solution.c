@@ -11,7 +11,9 @@ bool isAnagram(char* s, char* t) {
     t++;
   }
   for (int i = 0; i < 26; i++) {
-    if (count[i]) { return false; }
+    if (count[i]) {
+      return false;
+    }
   }
   return true;
 }

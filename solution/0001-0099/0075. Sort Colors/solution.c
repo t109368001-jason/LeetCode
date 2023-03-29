@@ -32,7 +32,9 @@ void sortColors(int* nums, int numsSize) {
         }
         c++;
       }
-      if (c >= right) { return; }
+      if (c >= right) {
+        return;
+      }
     }
   }
 }

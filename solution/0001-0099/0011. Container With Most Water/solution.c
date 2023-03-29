@@ -12,7 +12,9 @@ int maxArea(int* height, int heightSize) {
       num *= *height;
       height++;
     }
-    if (num > max) { max = num; }
+    if (num > max) {
+      max = num;
+    }
   }
   return max;
 }

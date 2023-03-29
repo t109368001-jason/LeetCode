@@ -1,6 +1,8 @@
 
 
-int compareIntDesc(const void* a, const void* b) { return (*(int*)b - *(int*)a); }
+int compareIntDesc(const void* a, const void* b) {
+  return (*(int*)b - *(int*)a);
+}
 
 int minimumCost(int* cost, int costSize) {
   int* end = cost + costSize;
@@ -12,7 +14,9 @@ int minimumCost(int* cost, int costSize) {
 
   int result = 0;
   for (int i = 0; i < costSize; i++) {
-    if (i % 3 == 2) { continue; }
+    if (i % 3 == 2) {
+      continue;
+    }
     result += buf[i];
   }
   return result;

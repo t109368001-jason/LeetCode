@@ -25,11 +25,15 @@ Solution* solutionCreate(struct ListNode* head) {
 int solutionGetRandom(Solution* obj) {
   int              index = rand() % obj->size;
   struct ListNode* tmp   = obj->head;
-  for (int i = 0; i < index; i++) { tmp = tmp->next; }
+  for (int i = 0; i < index; i++) {
+    tmp = tmp->next;
+  }
   return tmp->val;
 }
 
-void solutionFree(Solution* obj) { free(obj); }
+void solutionFree(Solution* obj) {
+  free(obj);
+}
 
 /**
  * Your Solution struct will be instantiated and called as such:

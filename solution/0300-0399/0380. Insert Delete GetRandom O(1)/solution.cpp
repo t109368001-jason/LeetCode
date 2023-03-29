@@ -18,7 +18,9 @@ class RandomizedSet {
   int getRandom() {
     int  r  = std::rand() % map_.size();
     auto it = map_.begin();
-    for (int i = 0; i < r; i++) { it++; }
+    for (int i = 0; i < r; i++) {
+      it++;
+    }
     return it->second;
   }
 };

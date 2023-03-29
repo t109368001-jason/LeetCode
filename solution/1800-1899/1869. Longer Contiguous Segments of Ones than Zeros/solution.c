@@ -9,12 +9,18 @@ bool checkZeroOnes(char* s) {
     if (!(*s) || *s != *l) {
       int count = s - l;
       if (*l == '1') {
-        if (count > onesCount) { onesCount = count; }
+        if (count > onesCount) {
+          onesCount = count;
+        }
       } else {
-        if (count > zerosCount) { zerosCount = count; }
+        if (count > zerosCount) {
+          zerosCount = count;
+        }
       }
       l = s;
-      if (!(*s)) { break; }
+      if (!(*s)) {
+        break;
+      }
     }
     s++;
   }

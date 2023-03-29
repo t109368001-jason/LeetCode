@@ -28,14 +28,18 @@ void _qsort(int* nums, int first, int last) {
 
 int** threeSum(int* nums, int numsSize, int* returnSize, int** returnColumnSizes) {
   int* sortedNums = calloc(numsSize, sizeof(int));
-  for (int i = 0; i < numsSize; i++) { sortedNums[i] = nums[i]; }
+  for (int i = 0; i < numsSize; i++) {
+    sortedNums[i] = nums[i];
+  }
   _qsort(sortedNums, 0, numsSize - 1);
 
   int   resultMaxSize = numsSize;
   int** result        = calloc(resultMaxSize, sizeof(int*));
   *returnSize         = 0;
   for (int i = 0; i < numsSize; i++) {
-    if (i != 0 && sortedNums[i - 1] == sortedNums[i]) { continue; }
+    if (i != 0 && sortedNums[i - 1] == sortedNums[i]) {
+      continue;
+    }
     int  lastK = numsSize - 1;
     int* l     = sortedNums + i + 1;
     int* r     = sortedNums + numsSize - 1;
@@ -52,7 +56,9 @@ int** threeSum(int* nums, int numsSize, int* returnSize, int** returnColumnSizes
       if ((*returnSize + 1) >= resultMaxSize) {
         resultMaxSize *= 2;
         int** newResult = calloc(resultMaxSize, sizeof(int*));
-        for (int ii = 0; ii < *returnSize; ii++) { newResult[ii] = result[ii]; }
+        for (int ii = 0; ii < *returnSize; ii++) {
+          newResult[ii] = result[ii];
+        }
         free(result);
         result = newResult;
       }

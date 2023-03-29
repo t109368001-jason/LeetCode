@@ -3,9 +3,13 @@ int compareNumStrDesc(void* a, void* b) {
   char* sb = *((char**)b);
   int   la = strlen(sa);
   int   lb = strlen(sb);
-  if (la != lb) { return (lb - la); }
+  if (la != lb) {
+    return (lb - la);
+  }
   while (*sa && &sb) {
-    if (*sa != *sb) { return (*sb - *sa); }
+    if (*sa != *sb) {
+      return (*sb - *sa);
+    }
     sa++;
     sb++;
   }

@@ -1,7 +1,9 @@
 
 
 int strStr(char* haystack, char* needle) {
-  if (!(*needle)) { return 0; }
+  if (!(*needle)) {
+    return 0;
+  }
   char* cursor = haystack;
   while (*cursor) {
     if (*cursor == *needle) {
@@ -9,12 +11,18 @@ int strStr(char* haystack, char* needle) {
       char* b = needle + 1;
 
       while (*a && *b) {
-        if (*a != *b) { break; }
+        if (*a != *b) {
+          break;
+        }
         a++;
         b++;
       }
-      if (!(*b)) { return cursor - haystack; }
-      if (!(*a)) { return -1; }
+      if (!(*b)) {
+        return cursor - haystack;
+      }
+      if (!(*a)) {
+        return -1;
+      }
     }
     cursor++;
   }

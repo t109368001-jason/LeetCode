@@ -6,7 +6,9 @@
 void smallestToFirst(int* buf, int** bufAddr, int k) {
   int index = 0;
   for (int i = 1; i < k; i++) {
-    if (buf[i] < buf[index]) { index = i; }
+    if (buf[i] < buf[index]) {
+      index = i;
+    }
   }
   if (index != 0) {
     int tmp        = buf[0];
@@ -32,7 +34,9 @@ void sortAddr(int* buf, int** bufAddr, int k) {
         flag           = false;
       }
     }
-    if (flag) { break; }
+    if (flag) {
+      break;
+    }
   }
 }
 

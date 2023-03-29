@@ -12,13 +12,19 @@ int numOfSubarrays(int* arr, int arrSize) {
     if (*c & 1) {
       l = c - 1;
       r = c + 1;
-      while (l != start && !(*l & 1)) { l--; }
+      while (l != start && !(*l & 1)) {
+        l--;
+      }
       int  m    = (c - l);
       bool flag = true;
       int  n    = 1;
       while (r != end) {
-        if (*r++ & 1) { flag = !flag; }
-        if (flag) { n++; }
+        if (*r++ & 1) {
+          flag = !flag;
+        }
+        if (flag) {
+          n++;
+        }
         // r++;
       }
       result += n * m;
